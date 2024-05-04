@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Heroes</title>
+    <link rel="stylesheet" href="css/bootstrap_css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/bootstrap_js/bootstrap.js" defer></script>
+    <script type="module"src="marvel.js" defer></script>
+</head>
+<body>
+    <div class="container ">
+        <div class="justify-content-md-center">
+            <div class="card">
+                <div class="card-header text-center text-bg-primary">
+                    <h2><b>SUPER SUPER HYPER SUPERHEROES</b></h2>
+                </div>
+            <div class="card-body">
+                <form class="row ">
+                    <div class="col-md-5 my-3">
+                        <label for="inputName" class="form-label"><b>Name</b></label>
+                        <input type="text" class="form-control" id="inputName" name="inputName">
+                    </div>
+                    <div class="col-md-4 my-3">
+                        <label for="inputActor" class="form-label"><b>Actor</b></label>
+                        <input type="text" class="form-control" id="inputActor" name="inputActor">
+                    </div>
+                    <div class="col-md-3 my-3">
+                        <label for="inputAge" class="form-label"><b>Age</b></label>
+                        <input type="number" class="form-control" id="inputAge" name="inputAge">
+                    </div>
+                    <div class="col-md-5 my-3">
+                        <label for="inputCity" class="form-label"><b>City Name</b></label>
+                        <input type="text" class="form-control" id="inputCity" name="inputCity">
+                    </div>
+                    <div class="col-md-4 my-3">
+                        <label for="inputDate" class="form-label"><b>Date when appears</b></label>
+                        <input type="date" class="form-control" id="inputDate" name="inputDate">
+                    </div>
+                    
+                    <div class="col-md-3 my-3">
+                        <label for="inputProducer"class="form-label" id=""><b>Producer</b></label>
+                        <select class="form-select" aria-label="Default select example" >
+                            <option selected>...</option>
+                            <option value="1">Marvel</option>
+                            <option value="2">Dc-Comics</option>
+                        </select>
+                    </div>  
+                    <div class="col my-3">
+                        <label for="inputPoster" class="form-label"><b>Poster</b></label>
+                        <input type="file" class="form-control" id="inputPoster" name="inputPoster">
+                    </div>
+
+
+                    <div class="row" id="suites">
+                        <div class="col">
+                            <div class="card mb-3" style="max-width: 100%;">
+                                <div class="card-header text-bg-secondary text-white"><b>Suit registration</b></div>
+                                <div class="card-body">
+                                    <p class="card-text"><i>In this section you could upload the different suits used by the superhero in all movies</i></p>
+                                    <a href="#" class="btn btn-warning" id="addSuite">+</a>
+                                    <div class="" style="width: 100%;">
+                                            <div class="container body-detail">
+
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </form>
+            </div>  
+        </div>
+    </div>
+</body>
+</html>

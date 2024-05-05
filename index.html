@@ -13,55 +13,55 @@
     <div class="container ">
         <div class="justify-content-md-center">
             <div class="card">
-                <div class="card-header text-center text-bg-primary">
+                <div class="card-header text-center text-bg-secondary">
                     <h2><b>SUPER SUPER HYPER SUPERHEROES</b></h2>
                 </div>
             <div class="card-body">
-                <form class="row ">
+                <form class="row " id="formHero">
                     <div class="col-md-5 my-3">
-                        <label for="inputName" class="form-label"><b>Name</b></label>
-                        <input type="text" class="form-control" id="inputName" name="inputName">
+                        <label for="Name" class="form-label"><b>Name</b></label>
+                        <input type="text" class="form-control" id="Name" name="Name">
                     </div>
                     <div class="col-md-4 my-3">
-                        <label for="inputActor" class="form-label"><b>Actor</b></label>
-                        <input type="text" class="form-control" id="inputActor" name="inputActor">
+                        <label for="Actor" class="form-label"><b>Actor</b></label>
+                        <input type="text" class="form-control" id="Actor" name="Actor">
                     </div>
                     <div class="col-md-3 my-3">
-                        <label for="inputAge" class="form-label"><b>Age</b></label>
-                        <input type="number" class="form-control" id="inputAge" name="inputAge">
+                        <label for="Age" class="form-label"><b>Age</b></label>
+                        <input type="number" class="form-control" id="Age" name="Age">
                     </div>
                     <div class="col-md-5 my-3">
-                        <label for="inputCity" class="form-label"><b>City Name</b></label>
-                        <input type="text" class="form-control" id="inputCity" name="inputCity">
+                        <label for="City" class="form-label"><b>City Name</b></label>
+                        <input type="text" class="form-control" id="City" name="City">
                     </div>
                     <div class="col-md-4 my-3">
-                        <label for="inputDate" class="form-label"><b>Date when appears</b></label>
-                        <input type="date" class="form-control" id="inputDate" name="inputDate">
+                        <label for="Date" class="form-label"><b>Date when appears</b></label>
+                        <input type="date" class="form-control" id="Date" name="Date">
                     </div>
                     
                     <div class="col-md-3 my-3">
-                        <label for="inputProducer"class="form-label" id=""><b>Producer</b></label>
-                        <select class="form-select" aria-label="Default select example" >
+                        <label for="Producer"class="form-label"><b>Producer</b></label>
+                        <select class="form-select" aria-label="Default select example" name="Producer" >
                             <option selected>...</option>
                             <option value="1">Marvel</option>
                             <option value="2">Dc-Comics</option>
                         </select>
                     </div>  
                     <div class="col my-3">
-                        <label for="inputPoster" class="form-label"><b>Poster</b></label>
-                        <input type="file" class="form-control" id="inputPoster" name="inputPoster">
+                        <label for="Poster" class="form-label"><b>Poster</b></label>
+                        <input type="file" class="form-control" id="Poster" name="Poster">
                     </div>
 
 
-                    <div class="row" id="suites">
-                        <div class="col">
-                            <div class="card mb-3" style="max-width: 100%;">
+                    <div class="row my-3" id="suites">
+                        <div class="col" >
+                            <div class="card mb-4" >
                                 <div class="card-header text-bg-secondary text-white"><b>Suit registration</b></div>
                                 <div class="card-body">
                                     <p class="card-text"><i>In this section you could upload the different suits used by the superhero in all movies</i></p>
                                     <a href="#" class="btn btn-warning" id="addSuite">+</a>
                                     <div class="" style="width: 100%;">
-                                            <div class="container body-detail">
+                                            <div class="container suites_detail">
 
                                             </div>
                                     </div>
@@ -69,6 +69,12 @@
                             </div>
                         </div>
                 </form>
+                <div class="buttons">
+
+                    <button type="button" class="btn btn-primary" id="newHero">Add </button>
+                    <button type="button" class="btn btn-success" id="addHero">Save</button>
+                    <button type="button" class="btn btn-danger" id="cancelHero">Cancel</button>
+                </div>
             </div>  
         </div>
     </div>

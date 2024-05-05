@@ -39,7 +39,7 @@ document.querySelector('#newHero').addEventListener('click', (e)=>{
     }
     console.log(heroData)
 })
-document.querySelector('#addSuite').addEventListener('click',(e)=>{
+document.querySelector('#addSuit').addEventListener('click',(e)=>{
     heroesSuites.insertAdjacentHTML('beforeend',createSuit())
 })
 

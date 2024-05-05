@@ -12,43 +12,53 @@ const heroInfo = {
 }
 
 let Allheroes =[];
-let heroData = heroInfo;
+let hero = heroInfo;
 
-document.querySelector('#newHero').addEventListener('click', (e)=>{
-    const dataHero=document.querySelector('#formHero');
-    const datos = Object.fromEntries(new FormData(dataHero).entries());
-    const hero = JSON.parse(JSON.stringify(datos));
-    const {Name,Actor,Age,City,Poster,Date,Producer:{}, ...resto}=hero;
+/*Con este addeven listener se cogen todos los datos del formulario y se ponen dentro de un objeto literal, almacenandolos*/
+document.querySelector('#save').addEventListener('click', (e)=>{
+    const formHero=document.querySelector('#formHero');
+    const datos = Object.fromEntries(new FormData(formHero).entries());
+    const heroData = JSON.parse(JSON.stringify(datos));
+    const {Name,Actor,Age,City,Poster,Date,Producer:{}, ...extra}=heroData;
 
-    heroData.Name=Name;
-    heroData.actor=Actor;
-    heroData.age=Age;
-    heroData.city=City;
-    heroData.poster=Poster;
-    heroData.date=Date;
-    heroData.producer.nameProducer=hero.Producer;
+    hero.Name=Name;
+    hero.actor=Actor;
+    hero.age=Age;
+    hero.city=City;
+    hero.poster=Poster;
+    hero.date=Date;
+    hero.producer.nameProducer=heroData.Producer;
 
     if(hero.Producer==='Marvel'){
-        heroData.producer.logoProducer='marvel.png'
+        hero.producer.logoProducer='marvel.png'
     }
     else if(hero.Producer=='Dc'){
-        heroData.producer.logoProducer='dc.png'
+        hero.producer.logoProducer='dc.png'
     }
     else{
-        heroData.producer.logoProducer='anonymous.png'
+        hero.producer.logoProducer='anonymous.png'
     }
-    console.log(heroData)
+    Object.entries(extra).forEach(item =>{
+        hero.suites.push(item[1]);
+    })
+    Allheroes.unshift(hero)
+    console.log(hero)
+    console.log(Allheroes)
+
 })
+
+/*Con este add even listener se crea el espacio para un nuevo traje */
 document.querySelector('#addSuit').addEventListener('click',(e)=>{
     heroesSuites.insertAdjacentHTML('beforeend',createSuit())
 })
-
+/*con este add event listener se le dice que revise cuando se le hace click dentro de un div, luego revisa el boton y 
+con esto revisa si el data-id del boton sea igual al id del div suits y lo elimina*/
 heroesSuites.addEventListener('click',(e)=>{
     if(e.target.name == "removeSuit"){
         document.querySelector(`#suit${e.target.dataset.id}`).remove();
 
 }})
-
+/*Se crea una funcion flecha capaz de crear un texto html*/
 const createSuit=()=>{
     let id=Date.now().toString(8)
     let suitData = /*text in html*/`

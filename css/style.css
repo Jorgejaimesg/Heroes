@@ -1,14 +1,45 @@
+:root{
+    --fondo:rgb(12,37,58);
+    --fondoclaro:rgb(27, 75, 114);
+
+}
+@font-face {
+    font-family: 'cartoon';
+    src: url(/font/cartoon-time/otf/cartoon-time-cartoon-time-svg-400.otf);
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-color: var(--fondo);
+}
+h2{
+    font-size: 4vw;
+}
 .container{
     padding-top: 50px;
 }
-.card{
-    padding-inline: 0;
+
+.card-header{
+    background-color: rgb(159, 162, 250);
+    font-family: cartoon;
+    
 }
-test{
-    margin:0
+.subTitle{
+    font-size: 1.5vw;
+}
+#addHero{
+    background-color: var(--fondoclaro);
+}
+#addHero:hover{
+    background-color: var(--fondo);
+}
+#save{
+    background-color: rgb(99, 146, 29);
+    border-color: rgb(99, 146, 29);
+}
+#save:hover{
+    background-color: rgb(68, 100, 20);
 }

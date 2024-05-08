@@ -13,7 +13,33 @@ const heroInfo = {
     producer:{}
 }
 
+const habilitate=(a,b)=>{
+    let elementosFormulario = document.getElementById("formHero").elements;
+    for (let i = 0; i < elementosFormulario.length; i++) {
+      // Habilitar el elemento estableciendo su atributo 'disabled' en false
+        elementosFormulario[i].disabled = a;
+    }
+    document.getElementById("cancelHero").disabled = a;
+    document.getElementById("save").disabled = a;
+    document.getElementById("showHeroes").disabled = b;
+    document.getElementById("addHero").disabled = b;
+}
+
 let Allheroes =[];
+document.addEventListener('DOMContentLoaded',(e)=>{
+    habilitate(true,false)
+})
+
+document.querySelector('#addHero').addEventListener('click',(e)=>{
+    habilitate(false,true) 
+})
+
+document.querySelector('#cancelHero').addEventListener('click',(e)=>{
+    habilitate(true,false)
+    
+
+})
+
 
 /*Con este addeven listener se cogen todos los datos del formulario y se ponen dentro de un objeto literal, almacenandolos*/
 document.querySelector('#save').addEventListener('click', (e)=>{
@@ -45,14 +71,17 @@ document.querySelector('#save').addEventListener('click', (e)=>{
         hero.suits.push(item[1]);
     })
     Allheroes.unshift(hero)
-    console.log(hero)
-    console.log(Allheroes)
+    formHero.reset() /*Borra todos los dator del formulario*/ 
+
+    habilitate(true,false)
 
 })
 
 /*Con este add even listener se crea el espacio para un nuevo traje */
 document.querySelector('#addSuit').addEventListener('click',(e)=>{
-    heroesSuits.insertAdjacentHTML('beforeend',createSuit())
+    e.preventDefault()
+    heroesSuits.insertAdjacentHTML('afterbegin',createSuit())
+    
 })
 /*con este add event listener se le dice que revise cuando se le hace click dentro de un div, luego revisa el boton y 
 con esto revisa si el data-id del boton sea igual al id del div suits y lo elimina*/
@@ -65,7 +94,7 @@ heroesSuits.addEventListener('click',(e)=>{
 const createSuit=()=>{
     let id=Date.now().toString(8)
     let suitData = /*text in html*/`
-        <div class="col-3" id="suit${id}">
+        <div class="col-md-3 col-sm-6"  id="suit${id}" name>
             <div class="col-12">
                 <div class="spaceSuit">
                     <div class="">

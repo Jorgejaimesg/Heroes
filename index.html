@@ -17,7 +17,7 @@
                     <h2><b>SUPER SUPER HYPER SUPERHEROES</b></h2>
                 </div>
             <div class="card-body">
-                <form class="row " id="formHero">
+                <form class="row" id="formHero" >
                     <div class="col-md-5 my-3">
                         <label for="Name" class="form-label"><b>Name</b></label>
                         <input type="text" class="form-control" id="Name" name="Name">
@@ -41,7 +41,7 @@
                     
                     <div class="col-md-3 my-3">
                         <label for="Producer"class="form-label"><b>Producer</b></label>
-                        <select class="form-select" aria-label="Default select example" name="Producer" >
+                        <select class="form-select" aria-label="Default select example" name="Producer">
                             <option selected>...</option>
                             <option value="Marvel">Marvel</option>
                             <option value="Dc">Dc-Comics</option>
@@ -59,7 +59,7 @@
                                 <div class="card-header subTitle"><b>Suit registration</b></div>
                                 <div class="card-body">
                                     <p class="card-text"><i>In this section you could upload the different suits used by the superhero in all movies</i></p>
-                                    <a href="#" class="btn btn-warning" id="addSuit">+</a>
+                                    <button href="#" class="btn btn-warning" id="addSuit">+</button>
                                     <div class="row container suits_detail pt-3">
                                         
                                     </div>
@@ -71,8 +71,9 @@
                 <div class="buttons">
 
                     <button type="button" class="btn btn-primary" id="addHero">Add </button>
-                    <button type="button" class="btn btn-success" id="save">Save</button>
                     <button type="button" class="btn btn-danger" id="cancelHero">Cancel</button>
+                    <button type="button" class="btn btn-success" id="save">Save</button>
+                    <button type="button" class="btn show" id="showHeroes">Show Heroes</button>
                 </div>
             </div>  
         </div>

@@ -43,3 +43,7 @@ h2{
 #save:hover{
     background-color: rgb(68, 100, 20);
 }
+#showHeroes{
+    background-color: rgb(168, 46, 166);
+    color:white;
+}
